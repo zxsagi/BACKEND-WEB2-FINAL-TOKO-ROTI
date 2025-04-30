@@ -23,7 +23,7 @@ export class ProductService {
       return saved;
     } catch (error) {
       console.error("❌ ERROR SAAT SIMPAN PRODUK:", error);
-      throw error; // Penting supaya frontend tahu ada error
+      throw error; //notif penting supaya frontend tahu ada error
     }
   }
 
