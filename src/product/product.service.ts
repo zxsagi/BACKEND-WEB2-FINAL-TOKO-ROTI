@@ -14,7 +14,6 @@ export class ProductService {
 
   async create(data: CreateProductDto) {
     console.log("✅ DATA DITERIMA DI SERVICE:", data);
-
     const product = this.productRepository.create(data);
 
     try {
@@ -23,7 +22,7 @@ export class ProductService {
       return saved;
     } catch (error) {
       console.error("❌ ERROR SAAT SIMPAN PRODUK:", error);
-      throw error; //notif penting supaya frontend tahu ada error
+      throw error;
     }
   }
 
