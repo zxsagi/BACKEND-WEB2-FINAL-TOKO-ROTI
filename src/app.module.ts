@@ -30,8 +30,10 @@ import { SalesModule } from './sales/sales.module';
         database: configService.get<string>('POSTGRES_DATABASE'),
         entities: [__dirname + '/**/*.entity{.ts,.js}'],
         migrations: ['dist/migrations/*.js'],
-        autoLoadEntities: true,
-        ssl: false,
+        synchronize: false,
+        ssl: {
+          rejectUnauthorized: false,
+          },
       }),
     }),
 
