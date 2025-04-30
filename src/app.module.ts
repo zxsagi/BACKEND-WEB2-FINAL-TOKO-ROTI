@@ -31,7 +31,7 @@ import { SalesModule } from './sales/sales.module';
         entities: [__dirname + '/**/*.entity{.ts,.js}'],
         migrations: ['dist/migrations/*.js'],
         autoLoadEntities: true,
-        ssl: true,
+        ssl: false,
       }),
     }),
 
